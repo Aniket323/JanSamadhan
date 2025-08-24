@@ -197,9 +197,10 @@ const CitizenDashboard: React.FC = () => {
 
   const stats = {
     total: userGrievances.length,
-    resolved: userGrievances.filter((g) => g.status === "Resolved").length,
-    inProgress: userGrievances.filter((g) => g.status === "In Progress").length,
-    pending: userGrievances.filter((g) => g.status === "Pending").length,
+    resolved: userGrievances.filter((g) => g.status === "resolved").length,
+    inProgress: userGrievances.filter((g) => g.status === "in_progress").length,
+    pending: userGrievances.filter((g) => g.status === "pending").length,
+    revert:userGrievances.filter((g) => g.status === "revert_back").length,
   };
 
   const styles = {
@@ -306,6 +307,12 @@ const CitizenDashboard: React.FC = () => {
             <h3 style={styles.cardTitle}>Pending</h3>
             <div style={{ ...styles.cardValue, color: "#dc3545" }}>
               {stats.pending}
+            </div>
+          </div>
+          <div style={statsCardStyle}>
+            <h3 style={styles.cardTitle}>Reverted</h3>
+            <div style={{ ...styles.cardValue, color: "#dc3545" }}>
+              {stats.revert}
             </div>
           </div>
         </div>
