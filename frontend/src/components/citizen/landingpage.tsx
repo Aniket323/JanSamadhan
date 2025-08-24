@@ -143,7 +143,7 @@ const LandingPage: React.FC = () => {
         }}
       >
         <h1 style={heroHeadingStyle}>
-          Welcome to the Citizen Grievance Portal
+          Welcome to the Jan Samadhan Portal
         </h1>
         <p
           style={{

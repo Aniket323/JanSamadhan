@@ -75,7 +75,7 @@ const Header: React.FC = () => {
             whiteSpace: "nowrap",
           }}
         >
-          Citizen Grievance Portal
+          Jan Samadhan Portal
         </div>
 
         {/* Desktop buttons */}
